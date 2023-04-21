@@ -1,0 +1,36 @@
+[package]
+name = "rust-debug-web"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[profile.release]
+opt-level = 3
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+# RUST_BACKTRACE=1 cargo watch -x run
+[dependencies]
+actix-web = "4.3"
+actix-cors = "0.6"
+dotenv = "0.15"
+
+# json支持
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+tokio = { version = "1.27", features = ["full"] }
+
+mysql_async = { version = "0.31", default-features = false, features = ["minimal"]}
+
+# log 日志支持
+log = "0.4.17"
+fast_log = "1.5"
+
+rbs = { version = "4.3"}
+rbatis = { version = "4.3"}
+rbdc-mysql = { version = "4.3"}
+# 日期支持
+chrono = "*"
+derive_more = "*"
+
+void="1.0"

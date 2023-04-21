@@ -1,0 +1,3 @@
+[[watch]]
+paths = ["src", "tests"]
+command = "cargo check"
